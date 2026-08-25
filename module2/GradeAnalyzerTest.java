@@ -45,4 +45,12 @@ public class GradeAnalyzerTest {
 
         assertEquals(55.0, GradeAnalyzer.calculateAverage(scores), 0.001);
     }
+
+    @Test
+public void testAverageTwoScores() {
+    ArrayList<Integer> scores =
+            new ArrayList<>(Arrays.asList(100, 50));
+
+    assertEquals(75.0, GradeAnalyzer.calculateAverage(scores), 0.001);
+}
 }

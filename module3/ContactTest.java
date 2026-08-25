@@ -45,4 +45,14 @@ public class ContactTest {
         assertEquals("111-111-1111", firstContact.getPhone());
         assertEquals("222-222-2222", secondContact.getPhone());
     }
+
+    @Test
+public void testContactsWithDifferentNamesAreIndependent() {
+    Contact firstContact = new Contact("Mike", "111-222-3333");
+    Contact secondContact = new Contact("Sarah", "444-555-6666");
+
+    assertNotSame(firstContact, secondContact);
+    assertEquals("Mike", firstContact.getName());
+    assertEquals("Sarah", secondContact.getName());
+}
 }
